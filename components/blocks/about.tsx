@@ -11,7 +11,10 @@ export default function About() {
         <div className="space-y-4 text-xl leading-relaxed">
           <p className="text-muted-foreground">
             The future of Human Computer Interaction is changing and this is my
-            effort with <span className="font-bold dark:text-white text-black">Antarys</span>{" "}
+            effort with{" "}
+            <span className="font-bold dark:text-white text-black">
+              Antarys
+            </span>{" "}
             <RichPopover
               trigger={
                 <span className="mx-1 inline-flex cursor-pointer align-sub">
@@ -28,7 +31,7 @@ export default function About() {
               meta="July 2025"
             />
             <br />I strongly believe in a future where AI will be accessible by
-            everyone, and I don not mean just Chatbots, I am talking about truly
+            everyone, and I do not mean just Chatbots, I am talking about truly
             intelligent machines with redefined HCI, where natural language is
             the only barrier between man and machines.
           </p>
