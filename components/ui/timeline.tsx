@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { InteractiveHoverButton } from "./ih-button";
 
 interface TimelineItem {
   date: string;
@@ -206,7 +207,7 @@ export function Timeline({
   descriptionClassName,
   dateClassName,
   buttonVariant = "default",
-  buttonSize = "sm",
+  buttonSize = "lg",
   animationDuration = 0.3,
   animationDelay = 0.1,
   showAnimation = true,
@@ -288,12 +289,12 @@ export function Timeline({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mt-8 flex justify-start ml-12"
+          className="mt-8 flex justify-start ml-12 gap-2"
         >
           <Button
             variant={buttonVariant}
             size={buttonSize}
-            className="gap-2"
+            className="gap-2 rounded-full"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? showLessText : showMoreText}
@@ -304,6 +305,10 @@ export function Timeline({
               <ChevronDown className="h-4 w-4" />
             </motion.div>
           </Button>
+
+          <Link href={"/resume.pdf"} download={"Adib Mohsin CV.pdf"}>
+            <InteractiveHoverButton text="CV" />
+          </Link>
         </motion.div>
       )}
     </div>
