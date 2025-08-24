@@ -1,6 +1,8 @@
 "use client";
 
 import { AreaChart, Area, ResponsiveContainer } from "recharts";
+import { Badge } from "./badge";
+import { BadgeIcon } from "lucide-react";
 
 export default function Stats() {
   const data = [
@@ -16,6 +18,9 @@ export default function Stats() {
   return (
     <section className="w-full mx-auto text-left pb-32">
       <div className="px-8 md:px-16 lg:px-24 xl:px-32">
+        <Badge className="mb-4">
+          <BadgeIcon /> Summing it up
+        </Badge>
         <h3 className="text-lg sm:text-xl lg:text-4xl font-medium text-gray-900 dark:text-white mb-16">
           My impact on teams and companies is clear.{" "}
           <span className="text-gray-500 dark:text-gray-400 text-lg sm:text-xl lg:text-4xl">

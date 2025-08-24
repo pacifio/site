@@ -41,7 +41,10 @@ export const Marquee = React.forwardRef<HTMLDivElement, MarqueeProps>(
     return (
       <div
         ref={ref}
-        className={cn("relative w-screen overflow-hidden py-16 border-t border-dashed z-0", className)}
+        className={cn(
+          "relative w-full overflow-hidden py-16 border-t border-dashed z-0",
+          className
+        )}
         {...props}
       >
         <>

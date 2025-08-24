@@ -1,10 +1,13 @@
 import About from "@/components/blocks/about";
 import { AntarysGrid } from "@/components/blocks/antarys-grid";
+import BepaariSection from "@/components/blocks/bepaari";
 import { HelloBlock } from "@/components/blocks/hello-block";
+import PuthikaSection from "@/components/blocks/puthika";
 import { Skills } from "@/components/blocks/skills";
 
 import { Summary } from "@/components/blocks/summary";
 import WorkTimeline from "@/components/blocks/work";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { CTAButton } from "@/components/ui/cta-btn";
 
 import { DefaultFAB } from "@/components/ui/floating-action-button";
@@ -55,8 +58,22 @@ export default function Home() {
         <div className="w-full border-b border-dashed my-12 md:my-24"></div>
 
         <div className="px-8 md:px-16 lg:px-24 xl:px-32">
-          <AntarysGrid />
+          <BlurFade delay={0.15} inView>
+            <AntarysGrid />
+          </BlurFade>
         </div>
+
+        <div className="w-full border-b border-dashed my-12 md:my-24"></div>
+
+        <BlurFade delay={0.15} inView>
+          <PuthikaSection />
+        </BlurFade>
+
+        <div className="w-full border-b border-dashed my-12 md:my-24"></div>
+
+        <BlurFade delay={0.15} inView>
+          <BepaariSection />
+        </BlurFade>
 
         <div className="w-full border-b border-dashed my-12 md:my-24"></div>
 
