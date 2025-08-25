@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Plus, Twitter } from "lucide-react";
+import { Brush, Github, Linkedin, Plus, Twitter } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 type FloatingActionMenuProps = {
   options: {
@@ -91,24 +92,32 @@ const FloatingActionMenu = ({
 };
 
 export const DefaultFAB = () => {
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
   return (
     <FloatingActionMenu
       options={[
         {
-          label: "LinkedIn",
+          label: "My LinkedIn",
           Icon: <Linkedin className="w-4 h-4" />,
           onClick: () =>
             window.open("https://www.linkedin.com/in/adib-mohsin", "_blank"),
         },
         {
-          label: "Twitter/X",
+          label: "My Twitter/X",
           Icon: <Twitter className="w-4 h-4" />,
           onClick: () => window.open("https://x.com/adib_builds", "_blank"),
         },
         {
-          label: "Github",
+          label: "My Github",
           Icon: <Github className="w-4 h-4" />,
           onClick: () => window.open("https://github.com/pacifio/", "_blank"),
+        },
+        {
+          label: "Theme",
+          Icon: <Brush className="w-4 h-4" />,
+          onClick: () => setTheme(isDark ? "light" : "dark"),
         },
       ]}
     />

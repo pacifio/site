@@ -75,7 +75,7 @@ export default function Home() {
           <BepaariSection />
         </BlurFade>
 
-        <div className="w-full border-b border-dashed my-12 md:my-24"></div>
+        <div className="w-full border-b border-dashed mb-12 md:mb-24"></div>
 
         <Stats />
 

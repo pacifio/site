@@ -14,8 +14,8 @@ export default function BepaariSection() {
               <Badge className="mb-4">
                 <FactoryIcon /> Scaled
               </Badge>
-              <h2 className="text-foreground text-balance text-4xl font-semibold">
-                Bepaari, The Industiral Inventory Management App
+              <h2 className="text-foreground text-balance text-4xl lg:text-5xl">
+                Co-Founded Bepaari
               </h2>
               <Button className="mt-8 pr-2" variant="outline" asChild>
                 <Link href="https://bepaari.com/" target="_blank">

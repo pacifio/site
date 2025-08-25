@@ -1,5 +1,6 @@
 import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid";
 import { Globe, Database, Settings, StarsIcon } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 const itemsSample: BentoItem[] = [
   {
@@ -42,6 +43,9 @@ const itemsSample: BentoItem[] = [
 function AntarysGrid() {
   return (
     <div className="">
+      <Badge className="mb-4">
+        <StarsIcon /> Focusing on
+      </Badge>
       <h3 className="text-lg sm:text-xl lg:text-3xl font-medium text-gray-900 dark:text-white mb-16 w-3/4">
         I am now committed to building Antarys.{" "}
         <span className="text-gray-500 dark:text-gray-400 text-lg sm:text-xl lg:text-3xl">
