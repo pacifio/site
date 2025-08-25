@@ -6,7 +6,7 @@ import { Avatar, AvatarImage } from "../ui/avatar";
 export default function About() {
   return (
     <div className="text-left px-8 md:px-16 lg:px-24 xl:px-32 mt-14">
-      <h3 className="text-2xl mb-3">My Misson?</h3>
+      <h3 className="text-2xl mb-3">My Mission?</h3>
       <div className="flex items-center justify-center">
         <div className="space-y-4 text-xl leading-relaxed">
           <p className="text-muted-foreground">
