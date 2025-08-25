@@ -1,6 +1,7 @@
 import About from "@/components/blocks/about";
 import { AntarysGrid } from "@/components/blocks/antarys-grid";
 import BepaariSection from "@/components/blocks/bepaari";
+import { Cmd, CmdTrigger } from "@/components/blocks/cmd";
 import { HelloBlock } from "@/components/blocks/hello-block";
 import PuthikaSection from "@/components/blocks/puthika";
 import { Skills } from "@/components/blocks/skills";
@@ -37,9 +38,13 @@ export default function Home() {
             </CTAButton>
           </Link>
 
-          <ThemeToggle />
+          <div className="flex items-center gap-4">
+            <CmdTrigger />
+            <ThemeToggle />
+          </div>
         </div>
       </div>
+
       <div className="flex flex-col justify-center items-center container mx-auto border-l border-r border-dashed pt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 px-8 md:px-16 lg:px-24 xl:px-32">
           <HelloBlock />
@@ -82,6 +87,7 @@ export default function Home() {
         <Marquee text="Building In Scale" />
       </div>
 
+      <Cmd />
       <DefaultFAB />
     </main>
   );
