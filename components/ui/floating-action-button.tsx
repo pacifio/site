@@ -3,9 +3,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Brush, Github, Linkedin, Plus, Twitter } from "lucide-react";
+import { Github, Linkedin, Plus, Twitter } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 
 type FloatingActionMenuProps = {
   options: {
@@ -30,7 +29,7 @@ const FloatingActionMenu = ({
     <div className={cn("fixed bottom-8 right-8", className)}>
       <Button
         onClick={toggleMenu}
-        className="w-10 h-10 rounded-full bg-[#111111d1] dark:bg-white/95 shadow-[0_0_20px_rgba(0,0,0,0.2)] z-10 cursor-pointer"
+        className="w-10 h-10 rounded-full bg-white/95 shadow-[0_0_20px_rgba(0,0,0,0.2)] z-10 cursor-pointer"
       >
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
@@ -42,7 +41,7 @@ const FloatingActionMenu = ({
             damping: 20,
           }}
         >
-          <Plus className="w-6 h-6 text-white dark:text-black" />
+          <Plus className="w-6 h-6 text-black" />
         </motion.div>
       </Button>
 
@@ -92,9 +91,6 @@ const FloatingActionMenu = ({
 };
 
 export const DefaultFAB = () => {
-  const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
-
   return (
     <FloatingActionMenu
       options={[
@@ -113,11 +109,6 @@ export const DefaultFAB = () => {
           label: "My Github",
           Icon: <Github className="w-4 h-4" />,
           onClick: () => window.open("https://github.com/pacifio/", "_blank"),
-        },
-        {
-          label: "Theme",
-          Icon: <Brush className="w-4 h-4" />,
-          onClick: () => setTheme(isDark ? "light" : "dark"),
         },
       ]}
     />

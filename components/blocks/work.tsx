@@ -7,11 +7,18 @@ export default function WorkTimeline() {
     <Timeline
       items={[
         {
-          date: "2025-07-01",
+          date: "2026-01-01",
+          title: "IdeaBox AI",
+          description:
+            "I help teams with AI implementation design into their product as well as overlook architecture design for various applications managed by IdeaBox AI and partners.",
+          href: "https://ideabox.ai/",
+        },
+        {
+          date: "2025-06-01",
           title: "Founder - Antarys AI",
           description:
-            "Building next-gen AI compute platform solving latency and response time for enterprises worldwide.",
-          href: "https://antarys.ai/",
+            "Founded and maintained next-gen AI compute platform. Jun 2025 - Aug 2025 · 3 mos. Now open sourced.",
+          href: "https://github.com/pacifio",
         },
         {
           date: "2023-09-01",

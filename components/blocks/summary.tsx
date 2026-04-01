@@ -16,9 +16,9 @@ const defaultCards = [
   },
   {
     icon: <Globe2 className="size-4 text-blue-300" />,
-    title: "Previously At",
-    description: "Puthika - Largest Bengali Audiobooks",
-    date: "Since 2020",
+    title: "Open Source",
+    description: "Antarys - AI Infra (Open Sourced)",
+    date: "2025",
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-500",
     className:
@@ -26,9 +26,9 @@ const defaultCards = [
   },
   {
     icon: <Sparkles className="size-4 text-blue-300" />,
-    title: "Founder",
-    description: "Antarys Inc - Future of AI infra",
-    date: "Jul 2025",
+    title: "Currently At",
+    description: "IdeaBox AI - AI Implementation",
+    date: "Jan 2026",
     iconClassName: "text-blue-500",
     titleClassName: "text-blue-500",
     className:

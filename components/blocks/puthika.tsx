@@ -55,17 +55,10 @@ export default function FeaturesSection() {
             target="_blank"
             className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3"
           >
-            <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
+            <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-700 to-transparent p-px">
               <Image
                 src="/puthika-dark.png"
-                className="hidden rounded-[15px] dark:block"
-                alt="puthika app"
-                width={1207}
-                height={929}
-              />
-              <Image
-                src="/puthika-light.png"
-                className="rounded-[15px] shadow dark:hidden"
+                className="rounded-[15px]"
                 alt="puthika app"
                 width={1207}
                 height={929}

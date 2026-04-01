@@ -14,57 +14,54 @@ export default function Stats() {
   ];
 
   return (
-    <section className="w-full mx-auto text-left pb-32">
-      <div className="px-8 md:px-16 lg:px-24 xl:px-32">
-        <h3 className="text-lg sm:text-xl lg:text-4xl font-medium text-gray-900 dark:text-white mb-16">
+    <section className="w-full mx-auto text-left pb-24">
+      <div className="px-6 md:px-12 lg:px-20 xl:px-28">
+        <h3 className="text-base sm:text-lg lg:text-2xl font-medium text-foreground mb-10">
           My impact on teams and companies is clear.{" "}
-          <span className="text-gray-500 dark:text-gray-400 text-lg sm:text-xl lg:text-4xl">
+          <span className="text-muted-foreground">
             For more than 6 years I have helped companies write mission critical
             software, raised startups and worked across borders. And now I am
-            committed on building the future of AI infra.
+            helping teams implement AI into their products.
           </span>
         </h3>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
           <div>
-            <p className="text-3xl font-medium text-gray-900 dark:text-white">
-              1.5-2x
-            </p>
-            <p className="text-gray-500 text-md">faster query</p>
+            <p className="text-2xl font-medium text-foreground">10+</p>
+            <p className="text-muted-foreground text-sm">open source projects</p>
           </div>
           <div>
-            <p className="text-3xl font-medium text-gray-900 dark:text-white">
-              25%
-            </p>
-            <p className="text-gray-500 text-md">less CPU consumption</p>
+            <p className="text-2xl font-medium text-foreground">8.6x</p>
+            <p className="text-muted-foreground text-sm">faster embeddings</p>
           </div>
           <div>
-            <p className="text-3xl font-medium text-gray-900 dark:text-white">
-              8-10x
-            </p>
-            <p className="text-gray-500 text-md">faster image search</p>
+            <p className="text-2xl font-medium text-foreground">500k+</p>
+            <p className="text-muted-foreground text-sm">users shipped to</p>
+          </div>
+          <div>
+            <p className="text-2xl font-medium text-foreground">6+</p>
+            <p className="text-muted-foreground text-sm">years building</p>
           </div>
         </div>
       </div>
 
-      {/* Area Chart */}
-      <div className="w-full h-48 mt-8 px-0 md:px-8">
+      <div className="w-full h-36 mt-6 px-0 md:px-6">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>
-              <linearGradient id="colorBlue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+              <linearGradient id="colorAccent" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#a8a29e" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="#a8a29e" stopOpacity={0} />
               </linearGradient>
             </defs>
 
             <Area
               type="monotone"
               dataKey="value"
-              stroke="#3b82f6"
+              stroke="#a8a29e"
               strokeWidth={2}
               fillOpacity={1}
-              fill="url(#colorBlue)"
+              fill="url(#colorAccent)"
             />
           </AreaChart>
         </ResponsiveContainer>

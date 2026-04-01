@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun, Download, MessageCircle } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Download, MessageCircle } from "lucide-react";
 
 import {
   CommandDialog,
@@ -15,8 +14,6 @@ import {
 
 export function Cmd() {
   const [open, setOpen] = React.useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -29,11 +26,6 @@ export function Cmd() {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
-
-  const handleThemeToggle = () => {
-    setTheme(isDark ? "light" : "dark");
-    setOpen(false);
-  };
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
@@ -55,10 +47,6 @@ export function Cmd() {
         <CommandEmpty>No results found.</CommandEmpty>
 
         <CommandGroup heading="Actions">
-          <CommandItem onSelect={handleThemeToggle}>
-            {isDark ? <Sun /> : <Moon />}
-            <span>Switch Theme</span>
-          </CommandItem>
           <CommandItem onSelect={handleDownloadCV}>
             <Download />
             <span>Download CV</span>
